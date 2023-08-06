@@ -3,6 +3,8 @@ package main
 import "core:c"
 import "core:fmt"
 import "core:math"
+import "core:strconv"
+import "core:os"
 
 foreign import cubiomes "cubiomes.o"
 
@@ -46,9 +48,13 @@ main :: proc() {
     generator := cast(^Generator) new([65536]u8)
     setupGenerator(generator, MC_1_16_1, 0)
 
-    applySeed(generator, DIMENSION_NETHER, 0)
-
     seed: u64 = 0
+
+    args := os.args
+    if len(args) > 1 {
+        seed, _ = strconv.parse_u64(args[1])
+    }
+
     for {
         //if seed % 100 == 0 {
         //    fmt.printf("Checking seed {}...\n", seed)

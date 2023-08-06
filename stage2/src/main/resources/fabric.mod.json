@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "seedfilter",
+  "version": "${version}",
+  "name": "Seedfilter",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/seedfilter/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.danterus.seedfilter.Seedfilter"
+    ]
+  },
+  "mixins": [
+    "seedfilter.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": "1.16.1"
+  }
+}

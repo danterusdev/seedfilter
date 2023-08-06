@@ -1,3 +1,3 @@
 [submodule "cubiomes"]
-	path = cubiomes
+	path = stage1/cubiomes
 	url = https://github.com/Cubitect/cubiomes
